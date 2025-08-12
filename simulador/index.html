@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Regex Tester</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 20px; }
+        input, output { font-size: 1em; padding: 5px; margin-top: 10px; display: block; }
+        .match { color: green; }
+        .no-match { color: red; }
+        .error { color: orange; }
+    </style>
+</head>
+<body>
+    <h2>Regex tester</h2>
+    <label for="regex">Regex Pattern:</label>
+    <input type="text" id="regex" placeholder="ex.  ^hello$">
+
+    <br><br>
+
+    <label for="testString">String to test:</label>
+    <input type="text" id="testString" placeholder="ex. hello">
+    
+    <br><br>
+
+    <output id="result"></output>
+    
+    <script>
+        const regexInput = document.getElementById('regex');
+        const stringInput = document.getElementById('testString');
+        const resultOutput = document.getElementById('result');
+
+        function updateResult() {
+            const pattern = regexInput.value;
+            const testString = stringInput.value;
+
+            try {
+                const regex = new RegExp(pattern);
+
+                if (regex.test(testString)) {
+                    resultOutput.textContent = "Match";
+                    resultOutput.className = "match";
+                } else {
+                    resultOutput.textContent = "Not Match";
+                    resultOutput.className = "no-match";
+                }
+            } catch (e) {
+                resultOutput.textContent = "Invalid";
+                resultOutput.className = "error";
+            }
+        }
+
+        regexInput.addEventListener('input', updateResult);
+        stringInput.addEventListener('input', updateResult);
+    </script>
+</body>
+</html>
