@@ -1,0 +1,7 @@
+G = ({S, A}, {a,b,c}, P, S)
+P = { 
+    S -> aA |bS | cS | e,
+    A -> aA | cS | e
+}
+
+(b|c|a(b|a|c)?)*

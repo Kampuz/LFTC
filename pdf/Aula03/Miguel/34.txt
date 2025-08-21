@@ -1,0 +1,10 @@
+G = ({S,A,B,C,D}, {a,b,c}, P, S)
+P = { 
+    S -> aS | bS | cS | aA | bB | cC,
+    A -> aaS | aaD,
+    B -> bbS | bbD,
+    C -> ccS | ccD,
+    D -> aD | bD | cD | e,
+}
+
+[ac]*(aaa|bbb|ccc)[ac]*

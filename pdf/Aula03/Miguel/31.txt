@@ -1,0 +1,6 @@
+G = ({S,A}, {a,b,c}, P, S)
+P = { S-> aS | bS | cA | c,
+    A -> aA | bA | cS | e
+}
+
+[ab]*c([ab]*c[ab]*c)*[ab]*

@@ -1,0 +1,7 @@
+G = ({S,A}, {a,b,c}, P, S)
+P = { 
+    S -> aS | bS | cS | abcA
+    A -> e,
+}
+
+[ac]*abc[ac]*

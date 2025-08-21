@@ -1,0 +1,9 @@
+G = ({S,A,B,C}, {a,b,c}, P, S)
+P = { 
+    S -> A | B | C | e,
+    A -> bB | CC | e,
+    B -> aA | cC | e,
+    C -> bB | cC | e
+}
+
+(a(b|c)|b(a|c)|c(a|b))*

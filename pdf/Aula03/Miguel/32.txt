@@ -1,0 +1,9 @@
+G = ({S,A,B,C}, {a,b,c}, P, S)
+P = { 
+    S -> aB | bS | cA,
+    A -> aC | bA | cS | e,
+    B -> aS | bB | cC,
+    C -> aA | bC | cB
+}
+
+(b∗(ab∗ab∗)∗cb∗(ab∗ab∗)∗)∣(b∗(ab∗ab∗)∗ab∗cb∗(ab∗ab∗)∗ab∗)(c[(b∗(ab∗ab∗)∗cb∗(ab∗ab∗)∗)∣(b∗(ab∗ab∗)∗ab∗cb∗(ab∗ab∗)∗ab∗)])∗
