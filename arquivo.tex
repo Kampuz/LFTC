@@ -6,6 +6,18 @@
 \usepackage{graphicx}
 \usepackage{caption}
 \usepackage{float}
+\usepackage{pgffor}
+
+\newcommand\Insert[1]{%
+    \foreach \x in {#1}{%
+        \begin{figure}[H]
+            \centering
+            \includegraphics[width=0.6\textwidth]{Aula03/Daniel/\x.png} % adjust path
+            \caption*{\x} % <- custom caption (no "Figure" label, no numbering)
+            \label{fig:Graphic\x} % still works for \ref if you want
+        \end{figure}
+    }%
+}
 
 
 \title{LFTC}
@@ -15,6 +27,9 @@
 \begin{document}
 
 \maketitle
+\newpage
+
+\tableofcontents
 \newpage
 
 \section{Aula 02 }
@@ -100,235 +115,117 @@
 
 \section{Aula 03 - Feito junto de Daniel Padua}
 
+    \foreach \i in {1,...,11}{
+    \begin{figure}[H] 
+        \centering
+        \includegraphics[width=0.5\textwidth]{Aula03/Daniel/\i.png}
+        \caption*{\i}
+    \end{figure}
+    }
+    \foreach \i in {15,...,19}{
+    \begin{figure}[H] 
+        \centering
+        \includegraphics[width=0.5\textwidth]{Aula03/Daniel/\i.png}
+        \caption*{\i}
+    \end{figure}
+    }
+    \foreach \i in {20,...,29}{
     \begin{figure}[H]
         \centering
-        \includegraphics[width=0.6\textwidth]{Aula03/Daniel/1.png}
-        \caption*{1}
+        \includegraphics[width=0.5\textwidth]{Aula03/Abigail/\i.png}
+        \caption*{\i}
     \end{figure}
-    \begin{figure}[H]
-        \centering
-        \includegraphics[width=0.6\textwidth]{Aula03/Daniel/2.png}
-        \caption*{2}
-    \end{figure}
-    \begin{figure}[H]
-        \centering
-        \includegraphics[width=0.6\textwidth]{Aula03/Daniel/3.png}
-        \caption*{3}
-    \end{figure}
-    \begin{figure}[H]
-        \centering
-        \includegraphics[width=0.6\textwidth]{Aula03/Daniel/4.png}
-        \caption*{4}
-    \end{figure}
-    \begin{figure}[H]
-        \centering
-        \includegraphics[width=0.6\textwidth]{Aula03/Daniel/5.png}
-        \caption*{5}
-    \end{figure}
-    \begin{figure}[H]
-        \centering
-        \includegraphics[width=0.6\textwidth]{Aula03/Daniel/6.png}
-        \caption*{6}
-    \end{figure}
-    \begin{figure}[H]
-        \centering
-        \includegraphics[width=0.6\textwidth]{Aula03/Daniel/7.png}
-        \caption*{7}
-    \end{figure}
-    \begin{figure}[H]
-        \centering
-        \includegraphics[width=0.6\textwidth]{Aula03/Daniel/8.png}
-        \caption*{8}
-    \end{figure}
-    \begin{figure}[H]
-        \centering
-        \includegraphics[width=0.6\textwidth]{Aula03/Daniel/9.png}
-        \caption*{9}
-    \end{figure}
-    \begin{figure}[H]
-        \centering
-        \includegraphics[width=0.6\textwidth]{Aula03/Daniel/10.png}
-        \caption*{10}
-    \end{figure}
-    \begin{figure}[H]
-        \centering
-        \includegraphics[width=0.6\textwidth]{Aula03/Daniel/11.png}
-        \caption*{11}
-    \end{figure}
-    %\begin{figure}[h]
-    %    \centering
-    %    \includegraphics[width=0.6\textwidth]{Aula03/Daniel/12.png}
-    %    \caption*{12}
-    %\end{figure}
-    %\begin{figure}[h]
-    %    \centering
-    %    \includegraphics[width=0.6\textwidth]{Aula03/Daniel/13.png}
-    %    \caption*{13}
-    %\end{figure}
-    %\begin{figure}[h]
-    %    \centering
-    %    \includegraphics[width=0.6\textwidth]{Aula03/Daniel/14.png}
-    %    \caption*{14}
-    %\end{figure}
-    \begin{figure}[H]
-        \centering
-        \includegraphics[width=0.6\textwidth]{Aula03/Daniel/15.png}
-        \caption*{15}
-    \end{figure}
-    \begin{figure}[H]
-        \centering
-        \includegraphics[width=0.6\textwidth]{Aula03/Daniel/16.png}
-        \caption*{16}
-    \end{figure}
-    \begin{figure}[H]
-        \centering
-        \includegraphics[width=0.6\textwidth]{Aula03/Daniel/17.png}
-        \caption*{17}
-    \end{figure}
-    \begin{figure}[H]
-        \centering
-        \includegraphics[width=0.6\textwidth]{Aula03/Daniel/18.png}
-        \caption*{18}
-    \end{figure}
-    \begin{figure}[H]
-        \centering
-        \includegraphics[width=0.6\textwidth]{Aula03/Daniel/19.png}
-        \caption*{19}
-    \end{figure}
-    \begin{figure}[H]
-        \centering
-        \includegraphics[width=0.6\textwidth]{Aula03/Abigail/20.png}
-        \caption*{20}
-    \end{figure}
-    \begin{figure}[H]
-        \centering
-        \includegraphics[width=0.6\textwidth]{Aula03/Abigail/21.png}
-        \caption*{21}
-    \end{figure}
-    \begin{figure}[H]
-        \centering
-        \includegraphics[width=0.6\textwidth]{Aula03/Abigail/22.png}
-        \caption*{22}
-    \end{figure}
-    \begin{figure}[H]
-        \centering
-        \includegraphics[width=0.6\textwidth]{Aula03/Abigail/23.png}
-        \caption*{23}
-    \end{figure}
-    \begin{figure}[H]
-        \centering
-        \includegraphics[width=0.6\textwidth]{Aula03/Abigail/24.png}
-        \caption*{24}
-    \end{figure}
-    \begin{figure}[H]
-        \centering
-        \includegraphics[width=0.6\textwidth]{Aula03/Abigail/25.png}
-        \caption*{25}
-    \end{figure}
-    \begin{figure}[H]
-        \centering
-        \includegraphics[width=0.6\textwidth]{Aula03/Abigail/26.png}
-        \caption*{26}
-    \end{figure}
-    \begin{figure}[H]
-        \centering
-        \includegraphics[width=0.6\textwidth]{Aula03/Abigail/27.png}
-        \caption*{27}
-    \end{figure}
-    \begin{figure}[H]
-        \centering
-        \includegraphics[width=0.6\textwidth]{Aula03/Abigail/28.png}
-        \caption*{28}
-    \end{figure}
-    \begin{figure}[H]
-        \centering
-        \includegraphics[width=0.6\textwidth]{Aula03/Abigail/29.png}
-        \caption*{29}
-    \end{figure}
+    }
 
-    $30) G = ({S,A}, {a,b,c}, P, S)$ \\
-    $P = { S-> aS | bA | cS | e,
-    A -> aA | bS | cA
-    }$ \\
 
-    $31) G = ({S,A}, {a,b,c}, P, S)$ \\
+$30) G = ({S,A}, {a,b,c}, P, S)$ \\
+$P = { S-> aS | bA | cS | e,
+A -> aA | bS | cA
+}$ \\
+
+$31) G = ({S,A}, {a,b,c}, P, S)$ \\
     $P = { S-> aS | bS | cA | c,
     A -> aA | bA | cS | e
     }$ \\
 
-    $32) G = ({S,A,B,C}, {a,b,c}, P, S)$ \\
+$32) G = ({S,A,B,C}, {a,b,c}, P, S)$ \\
     $P = { 
     S -> aB | bS | cA,
     A -> aC | bA | cS | e,
     B -> aS | bB | cC,
     C -> aA | bC | cB
     }$ \\
-
-    $33) G = ({S,A}, {a,b,c}, P, S)$ \\
+    
+$33) G = ({S,A}, {a,b,c}, P, S)$ \\
     $P = { 
-    S -> aS | bS | cS | abcA \\
-    A -> e,
-    }$ \\
-
-    $34) G = ({S,A,B,C,D}, {a,b,c}, P, S)$ \\
-    $P = { 
-    S -> aS | bS | cS | aA | bB | cC, \\
-    A -> aaS | aaD, \\
-    B -> bbS | bbD, \\
-    C -> ccS | ccD, \\
-    D -> aD | bD | cD | e, \\
-    }$ \\
-
-    $35) G = ({S,A,B,C}, {a,b,c}, P, S)$ \\
-    $P = { 
-    S -> A | B | C | e, \\
-    A -> bB | CC | e, \\
-    B -> aA | cC | e, \\
-    C -> bB | cC | e \\
-    }$ \\
-
-    $36) G = ({S}, {a,b,c}, P, S)$ \\
-    $P = { 
-    S -> bS | cS | e,
-    }$ \\
-
-    $37) G = ({S, A}, {a,b,c}, P, S)$ \\
-    $P = { 
-    S -> aA |bS | cS | e, \\
-    A -> aA | cS | e \\
-    }$ \\
-
-    $38) G = ({S, A}, {a,b,c}, P, S)$ \\
-    $P = { 
-    S -> aA | bS | cS | e, \\
-    A -> aA | bB | cS | e, \\
-    B -> aA | bS | e \\
-    }$ \\
-
-    \newpage
-    expressoes regulares:
-        \begin{figure}[H]
-            \centering
-            \includegraphics[width=0.6\textwidth]{Aula03/Daniel/ER.png}
-            \caption*{1-19}
-        \end{figure}
-
+        S -> aS | bS | cS | abcA \\
+        A -> e,
+        }$ \\
+        
+        $34) G = ({S,A,B,C,D}, {a,b,c}, P, S)$ \\
+        $P = { 
+            S -> aS | bS | cS | aA | bB | cC, \\
+            A -> aaS | aaD, \\
+            B -> bbS | bbD, \\
+            C -> ccS | ccD, \\
+            D -> aD | bD | cD | e, \\
+            }$ \\
+            
+            $35) G = ({S,A,B,C}, {a,b,c}, P, S)$ \\
+            $P = { 
+                S -> A | B | C | e, \\
+                A -> bB | CC | e, \\
+                B -> aA | cC | e, \\
+                C -> bB | cC | e \\
+                }$ \\
+                
+                $36) G = ({S}, {a,b,c}, P, S)$ \\
+                $P = { 
+                    S -> bS | cS | e,
+                    }$ \\
+                    
+                    $37) G = ({S, A}, {a,b,c}, P, S)$ \\
+                    $P = { 
+                        S -> aA |bS | cS | e, \\
+                        A -> aA | cS | e \\
+                        }$ \\
+                        
+                        $38) G = ({S, A}, {a,b,c}, P, S)$ \\
+                        $P = { 
+                            S -> aA | bS | cS | e, \\
+                            A -> aA | bB | cS | e, \\
+                            B -> aA | bS | e \\
+                            }$ \\
+                            
+                            \newpage
+                            expressoes regulares:
+                            \begin{figure}[H]
+                                \centering
+                                \includegraphics[width=0.6\textwidth]{Aula03/Daniel/ER.png}
+                                \caption*{1-19}
+                            \end{figure}
+                            
     $30) ((a|c)*((a|c)*b(a|c)*b)*)*$ \\
-
+                            
     $31) [ab]*c([ab]*c[ab]*c)*[ab]*$ \\
-
+                            
     $32) (b*(ab*ab*)*cb*(ab*ab*)*)|(b*(ab*ab*)*ab*cb*(ab*ab*)*ab*)(c[(b*(ab*ab*)*cb*(ab*ab*)*)|(b*(ab*ab*)*ab*cb*(ab*ab*)*ab*)])*$ \\
-
+                            
     $33) [ac]*abc[ac]*$ \\
-
+                            
     $34) [ac]*(aaa|bbb|ccc)[ac]*$ \\
-
+    
     $35) (a(b|c)|b(a|c)|c(a|b))*$ \\
-
+    
     $36) (b|c|a(a|c)?)*$ \\
-
+    
     $37) (b|c|a(b|a|c)?)*$ \\
-
+    
     $38) (b|c|a(b|a|c)?)*$ \\
+    
+\section{Aula 04}
+
+
+
 
 \end{document}
