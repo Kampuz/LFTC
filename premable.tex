@@ -1,0 +1,19 @@
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{enumitem}
+\usepackage{graphicx}
+\usepackage{caption}
+\usepackage{float}
+\usepackage{pgffor}
+
+\graphicspath{{imagens/}} % base image folder
+
+\newcommand\Insert[1]{
+    \foreach \x in {#1}{
+        \begin{figure}[H]
+            \centering
+            \includegraphics[width=0.6\textwidth]{Aula03/Daniel/\x.png}
+            \caption*{\x}
+        \end{figure}
+    }
+}

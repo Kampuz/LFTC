@@ -1,0 +1,92 @@
+\section{Aula 03 - Feito junto de Daniel Padua}
+
+    \foreach \i in {1,...,11}{
+    \begin{figure}[H] 
+        \centering
+        \includegraphics[width=0.5\textwidth]{Aula03/Daniel/\i.png}
+        \caption*{\i}
+    \end{figure}
+    }
+    \foreach \i in {15,...,19}{
+    \begin{figure}[H] 
+        \centering
+        \includegraphics[width=0.5\textwidth]{Aula03/Daniel/\i.png}
+        \caption*{\i}
+    \end{figure}
+    }
+    \foreach \i in {20,...,29}{
+    \begin{figure}[H]
+        \centering
+        \includegraphics[width=0.5\textwidth]{Aula03/Abigail/\i.png}
+        \caption*{\i}
+    \end{figure}
+    }
+
+\begin{enumerate}
+    \item[30)] 
+    $G = (\{S,A\}, \{a,b,c\}, P, S)$, com \\
+    $P = \{ S \to aS \mid bA \mid cS \mid \epsilon,\;
+    A \to aA \mid bS \mid cA \}$ \\[6pt]
+    ER: $((a|c)*((a|c)*b(a|c)*b)*)*$
+
+    \item[31)] 
+    $G = (\{S,A\}, \{a,b,c\}, P, S)$, com \\
+    $P = \{ S \to aS \mid bS \mid cA \mid c,\;
+    A \to aA \mid bA \mid cS \mid \epsilon \}$ \\[6pt]
+    ER: $[ab]*c([ab]*c[ab]*c)*[ab]*$
+
+    \item[32)] 
+    $G = (\{S,A,B,C\}, \{a,b,c\}, P, S)$, com \\
+    $P = \{ 
+    S \to aB \mid bS \mid cA,\;
+    A \to aC \mid bA \mid cS \mid \epsilon,\;
+    B \to aS \mid bB \mid cC,\;
+    C \to aA \mid bC \mid cB \}$ \\[6pt]
+    ER: $(b*(ab*ab*)*cb*(ab*ab*)*) \mid (b*(ab*ab*)*ab*cb*(ab*ab*)*ab*)(c[(b*(ab*ab*)*cb*(ab*ab*)*) \mid (b*(ab*ab*)*ab*cb*(ab*ab*)*ab*)])* $
+
+    \item[33)] 
+    $G = (\{S,A\}, \{a,b,c\}, P, S)$, com \\
+    $P = \{ 
+    S \to aS \mid bS \mid cS \mid abcA,\;
+    A \to \epsilon \}$ \\[6pt]
+    ER: $[ac]*abc[ac]*$
+
+    \item[34)] 
+    $G = (\{S,A,B,C,D\}, \{a,b,c\}, P, S)$, com \\
+    $P = \{ 
+    S \to aS \mid bS \mid cS \mid aA \mid bB \mid cC,\;
+    A \to aaS \mid aaD,\;
+    B \to bbS \mid bbD,\;
+    C \to ccS \mid ccD,\;
+    D \to aD \mid bD \mid cD \mid \epsilon \}$ \\[6pt]
+    ER: $[ac]*(aaa \mid bbb \mid ccc)[ac]*$
+
+    \item[35)] 
+    $G = (\{S,A,B,C\}, \{a,b,c\}, P, S)$, com \\
+    $P = \{ 
+    S \to A \mid B \mid C \mid \epsilon,\;
+    A \to bB \mid CC \mid \epsilon,\;
+    B \to aA \mid cC \mid \epsilon,\;
+    C \to bB \mid cC \mid \epsilon \}$ \\[6pt]
+    ER: $(a(b|c) \mid b(a|c) \mid c(a|b))*$
+
+    \item[36)] 
+    $G = (\{S\}, \{a,b,c\}, P, S)$, com \\
+    $P = \{ S \to bS \mid cS \mid \epsilon \}$ \\[6pt]
+    ER: $(b|c|a(a|c)?)*$
+
+    \item[37)] 
+    $G = (\{S,A\}, \{a,b,c\}, P, S)$, com \\
+    $P = \{ 
+    S \to aA \mid bS \mid cS \mid \epsilon,\;
+    A \to aA \mid cS \mid \epsilon \}$ \\[6pt]
+    ER: $(b|c|a(b|a|c)?)*$
+
+    \item[38)] 
+    $G = (\{S,A\}, \{a,b,c\}, P, S)$, com \\
+    $P = \{ 
+    S \to aA \mid bS \mid cS \mid \epsilon,\;
+    A \to aA \mid bB \mid cS \mid \epsilon,\;
+    B \to aA \mid bS \mid \ epsilon \}$ \\[6pt]
+    ER: $(b|c|a(b|a|c)?)*$
+\end{enumerate}
