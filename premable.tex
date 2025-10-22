@@ -8,12 +8,16 @@
 
 \graphicspath{{imagens/}} % base image folder
 
-\newcommand\Insert[1]{
-    \foreach \x in {#1}{
+\newcommand{\includeimages}[3]{
+    % #1 = folder path (i.e. Aula03/Daniel)
+    % #2 = start number
+    % #3 = end number
+
+    \foreach \i in {#2,...,#3}{
         \begin{figure}[H]
             \centering
-            \includegraphics[width=0.6\textwidth]{Aula03/Daniel/\x.png}
-            \caption*{\x}
+            \includegraphics[width=0.5\textwidth]{#1/\i.png}
+            \caption*{\i}
         \end{figure}
     }
 }
