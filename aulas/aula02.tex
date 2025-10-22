@@ -18,17 +18,17 @@
         \item $\mathbf{(000^*|1)^*}$
             \\ A linguagem é composta por cadeias que não contêm $0$'s sozinhos (eles estão sempre em grupos de $2+$).
         \item $\mathbf{(0^*|0^*11(1|00^*11)^*)(\epsilon|00^*)}$
-            \\ A linguagem de todas as cadeias em que cada bloco de 1’s tem comprimento pelo menos 2.
+            \\ A linguagem de todas as cadeias em que cada bloco de $1$’s tem comprimento pelo menos 2.
     \end{enumerate}
 
     \subsection{Sobre o $\sum = \{a,b\}$, defina expressoes regulares que representam as linguagens cujas sentencas estao descritas a seguir} 
     \begin{itemize}
         \item \textbf{Possuem comprimento maior ou igual a 3;}
-            \\ $(a|b)(a|b)(a|b)(a|b)*$
+            \\ $(a|b)(a|b)(a|b)(a|b)^*$
         \item \textbf{Possuem comprimento menor ou igual a 3;}
-            \\ $*(a|b|\epsilon)(a|b|\epsilon)(a|b|\epsilon)$
+            \\ $(a|b|\epsilon)(a|b|\epsilon)(a|b|\epsilon)$
         \item \textbf{Possuem comprimento diferente a 3;}
-            \\ $((a|b|\epsilon)(a|b|\epsilon))|((a|b)(a|b)(a|b)(a|b)*)$
+            \\ $((a|b|\epsilon)(a|b|\epsilon))|((a|b)(a|b)(a|b)(a|b)(a|b)^*)$
         \item \textbf{Possuem comprimento par;}
             \\ $((a|b)(a|b))^*$
         \item \textbf{Possuem comprimento impar;}
@@ -41,11 +41,11 @@
         \subsubsection{Escreva expressões regulares corresponden\-tes às seguintes linguagens:}
             \begin{enumerate}[label={\bfseries \alph*)}]
                 \item O conjunto de strings sobre o alfabeto $\{a, b, c\}$ que contém pelo menos um $a$ e um $b$.
-                    \\ $((c|a|b)^* a(c|a|b)^* b(c|a|b)^*)|((c|a|b)^* b(c|a|b)^* a(c|a|b)^*)$.
+                    \\ $((a|b|c)^* a(a|b|c)^* b(a|b|c)^*)|((a|b|c)^* b(a|b|c)^* a(a|b|c)^*)$.
                 \item O conjunto de strings $0$'s e $1$'s cujo décimo símbolo a partir da extremidade direita é $1$.
                     \\ $(0|1)^* 1 (0|1)(0|1)(0|1)(0|1)(0|1)(0|1)(0|1)(0|1)(0|1)$.
                 \item O conjunto de strings $0$'s e $1$'s com no máximo um par de $1$'s consecutivos.
-                    \\ $(0|10)^*(11)?(0|01)^*$
+                    \\ $(0|10)^*(\epsilon|(11))(0|01)^*$
             \end{enumerate}
             
         \subsubsection{Escreva expressões regulares corresponden\-tes às seguintes linguagens:}
