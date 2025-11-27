@@ -1,0 +1,50 @@
+\section*{Aula 08}
+    \subsection*{Exercício 1}
+        \subsubsection*{a)}
+            $G = ({S,E,T,F,N,D}, \{0,1,2,3,4,5,6,7,8,9,+,-,*,/,(,)\}, P, S)$ \\
+            $P$ =
+            \begin{tabular}[t]{l}
+                $E \rightarrow E + T \mid E - T \mid T$ \\
+                $T \rightarrow T * F \mid E / T \mid F$ \\
+                $F \rightarrow (E) \mid N$ \\
+                $N \rightarrow N D \mid D$ \\
+                $D \rightarrow 0 \mid 1 \mid 2 \mid 3 \mid 4 \mid 5 \mid 6 \mid 7 \mid 8 \mid 9$
+                \end{tabular}
+
+        \subsubsection*{b)}
+            $G = (S, \{a,b\}, P, S)$ \\
+            $P$ =
+            \begin{tabular}[t]{l}
+                \quad $S \rightarrow ab \mid ba$
+            \end{tabular}
+
+        \subsubsection*{c)}
+            $G = (\{S,A,B\}, \{0,1\}, P, S)$ \\
+            $P$ =
+            \begin{tabular}[t]{l}
+                \quad $S \rightarrow A$ \\
+                \quad $A \rightarrow 0A \mid B$ \\
+                \quad $B \rightarrow 1B \mid \varepsilon$
+            \end{tabular}
+
+        \subsubsection*{d)}
+            $G = (S, \{0,1\}, P, S)$ \\
+            $P$ =
+            \begin{tabular}[t]{l}
+                \quad $S \rightarrow 01 \mid 01\,S$
+            \end{tabular}
+
+        \subsubsection*{e)}
+            $G = (S, \{0,1\}, P, S)$ \\
+            $P$ =
+            \begin{tabular}[t]{l}
+                \quad $S \rightarrow 011 \mid 011\,S$
+            \end{tabular}
+
+        \subsubsection*{f)}
+            $G = (\{S,T\}, \{a,b,c\}, P, S)$ \\
+            $P$ =
+            \begin{tabular}[t]{l}
+                \quad $S \rightarrow a\,S\,b \mid T$ \\
+                \quad $S \rightarrow c\,T \mid \varepsilon$
+            \end{tabular}
